@@ -1,0 +1,3 @@
+[submodule "looqs-bundle"]
+	path = looqs-bundle
+	url = https://gitea.quitesimple.org/crtxcr/looqs-bundle.git
