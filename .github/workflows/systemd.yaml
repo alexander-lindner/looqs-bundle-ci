@@ -32,7 +32,7 @@ jobs:
         run: git submodule update --init --recursive
 
       - name: add user
-        run: adduser --disabled-password --gecos '' user
+        run: sudo adduser --disabled-password --gecos '' user
 
       - name: add gpg key
         run: su user -c 'gpg --keyserver keyserver.ubuntu.com --recv  534E4209AB49EEE1C19D96162C44695DB9F6043D'
