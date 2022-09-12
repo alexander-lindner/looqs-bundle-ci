@@ -6,4 +6,6 @@ RUN chmod 777 . -R
 
 RUN ./scripts/3-setup-gentoo.sh
 RUN useradd -m -G users,wheel,audio -s /bin/bash user
-CMD ["/bin/bash", "-c","./scripts/4-build-looqs.sh","&&",'chown user -R out','&&','su user -c "cd $(pwd); ./scripts/5-bundle.sh"']
+RUN mkdir ./out
+ADD ./entrypoint.sh /entrypoint.sh
+CMD ["/entrypoint.sh"]
